@@ -1,0 +1,444 @@
+tacsource:
+  data_format: Seqence
+  encoder_type: PUBMEDBERT
+  dropout_p: 0.3
+  enable_san: False
+  labels:
+  - O
+  - DB-AdverseReaction_rel
+  - DI-AdverseReaction_rel
+  - B-AdverseReaction_rel
+  - I-AdverseReaction_rel
+  - DB-AdverseReaction_no_rel
+  - DI-AdverseReaction_no_rel
+  - B-AdverseReaction_no_rel
+  - I-AdverseReaction_no_rel
+  - X
+  - CLS
+  - SEP
+  metric_meta:
+  - SeqEval
+  n_class: 12
+  loss: SeqCeCriterion
+  split_names:
+  - train
+  - dev
+  - test
+  task_type: SeqenceLabeling
+tacrelation:
+  data_format: Seqence
+  encoder_type: PUBMEDBERT
+  dropout_p: 0.3
+  enable_san: False
+  labels:
+  - O
+  - DB-Severity_Effect
+  - I-Factor_Negated
+  - I-Animal_Hypothetical
+  - DB-Negation_Negated
+  - B-Severity_Effect
+  - I-DrugClass_Hypothetical
+  - B-Factor_Hypothetical
+  - DI-DrugClass_Hypothetical
+  - B-DrugClass_Hypothetical
+  - B-Negation_Negated
+  - I-Factor_Effect
+  - B-Factor_Effect
+  - I-Factor_Hypothetical
+  - DI-Negation_Negated
+  - I-Severity_Negated
+  - DB-DrugClass_Hypothetical
+  - DI-Severity_Effect
+  - B-Animal_Hypothetical
+  - I-Negation_Negated
+  - B-Severity_Negated
+  - B-Factor_Negated
+  - I-Severity_Effect
+  - X
+  - CLS
+  - SEP
+  metric_meta:
+  - SeqEval
+  n_class: 26
+  loss: SeqCeCriterion
+  split_names:
+  - train
+  - dev
+  - test
+  task_type: SeqenceLabeling
+n2c2source:
+  data_format: Seqence
+  encoder_type: PUBMEDBERT
+  dropout_p: 0.3
+  enable_san: False
+  labels:
+  - O
+  - I-Drug_rel
+  - B-Drug_rel
+  - B-Drug_no_rel
+  - I-Drug_no_rel
+  - X
+  - CLS
+  - SEP
+  metric_meta:
+  - SeqEval
+  n_class: 8
+  loss: SeqCeCriterion
+  split_names:
+  - train
+  - dev
+  - test
+  task_type: SeqenceLabeling
+n2c2relation:
+  data_format: Seqence
+  encoder_type: PUBMEDBERT
+  dropout_p: 0.3
+  enable_san: False
+  labels:
+  - O
+  - B-Dosage
+  - I-Reason
+  - I-Route
+  - B-Strength
+  - I-Form
+  - I-Frequency
+  - B-Reason
+  - B-Duration
+  - B-Route
+  - I-ADE
+  - B-Form
+  - B-ADE
+  - B-Frequency
+  - I-Strength
+  - I-Duration
+  - I-Dosage
+  - X
+  - CLS
+  - SEP
+  metric_meta:
+  - SeqEval
+  n_class: 20
+  loss: SeqCeCriterion
+  split_names:
+  - train
+  - dev
+  - test
+  task_type: SeqenceLabeling
+drugprot:
+  data_format: Seqence
+  encoder_type: PUBMEDBERT
+  dropout_p: 0.3
+  enable_san: False
+  labels:
+  - O
+  - B-GENE_INDIRECT-UPREGULATOR
+  - B-GENE_AGONIST-ACTIVATOR
+  - B-GENE_INDIRECT-DOWNREGULATOR
+  - B-GENE_PRODUCT-OF
+  - I-GENE_AGONIST
+  - B-GENE_AGONIST
+  - I-GENE_AGONIST-INHIBITOR
+  - I-GENE_PART-OF
+  - B-GENE_AGONIST-INHIBITOR
+  - I-GENE_DIRECT-REGULATOR
+  - B-GENE_SUBSTRATE_PRODUCT-OF
+  - I-GENE_PRODUCT-OF
+  - B-GENE_DIRECT-REGULATOR
+  - I-GENE_INDIRECT-DOWNREGULATOR
+  - I-GENE_AGONIST-ACTIVATOR
+  - I-GENE_SUBSTRATE_PRODUCT-OF
+  - B-GENE_SUBSTRATE
+  - B-GENE_ANTAGONIST
+  - I-GENE_ANTAGONIST
+  - I-GENE_ACTIVATOR
+  - I-GENE_SUBSTRATE
+  - B-GENE_ACTIVATOR
+  - I-GENE_INHIBITOR
+  - I-GENE_INDIRECT-UPREGULATOR
+  - B-GENE_PART-OF
+  - B-GENE_INHIBITOR
+  - X
+  - CLS
+  - SEP
+  metric_meta:
+  - SeqEval
+  n_class: 30
+  loss: SeqCeCriterion
+  split_names:
+  - train
+  - dev
+  - test
+  task_type: SeqenceLabeling
+chemprot:
+  data_format: Seqence
+  encoder_type: PUBMEDBERT
+  dropout_p: 0.3
+  enable_san: False
+  labels:
+  - O
+  - I-GENE-N_CPR:4
+  - I-GENE-Y_CPR:6
+  - B-GENE-Y_CPR:6
+  - I-GENE-N_CPR:9
+  - B-GENE-N_CPR:6
+  - B-GENE-Y_CPR:3
+  - I-GENE-N_CPR:5
+  - B-GENE-N_CPR:5
+  - B-GENE-Y_CPR:9
+  - I-GENE-N_CPR:6
+  - I-GENE-Y_CPR:5
+  - B-GENE-Y_CPR:4
+  - B-GENE-N_CPR:4
+  - I-GENE-N_CPR:3
+  - I-GENE-Y_CPR:3
+  - B-GENE-N_CPR:3
+  - I-GENE-Y_CPR:4
+  - I-GENE-Y_CPR:9
+  - B-GENE-N_CPR:9
+  - B-GENE-Y_CPR:5
+  - X
+  - CLS
+  - SEP
+  metric_meta:
+  - SeqEval
+  n_class: 24
+  loss: SeqCeCriterion
+  split_names:
+  - train
+  - dev
+  - test
+  task_type: SeqenceLabeling
+i2b2concept:
+  data_format: Seqence
+  encoder_type: PUBMEDBERT
+  dropout_p: 0.1
+  enable_san: False
+  labels:
+  - B-problem
+  - I-problem
+  - B-treatment
+  - B-test
+  - I-treatment
+  - I-test
+  - O
+  - X
+  - CLS
+  - SEP
+  metric_meta:
+  - SeqEval
+  n_class: 10
+  loss: SeqCeCriterion
+  split_names:
+  - train
+  - test
+  task_type: SeqenceLabeling
+i2b2relation:
+  data_format: PremiseOnly
+  encoder_type: PUBMEDBERT
+  dropout_p: 0.1
+  enable_san: false 
+  labels:
+  - PIP
+  - TrWP
+  - TrNAP
+  - TrCP
+  - TrAP
+  - TrIP
+  - TeRP
+  - TeCP
+  metric_meta:
+  - ACC
+  - MCC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  adv_loss: SymKlCriterion
+  n_class: 8
+  split_names:
+  - train
+  - test
+  task_type: Classification
+i2b2ner2009:
+  data_format: Seqence
+  encoder_type: PUBMEDBERT
+  dropout_p: 0.3
+  enable_san: False
+  labels:
+  - O
+  - B-du
+  - I-mo
+  - B-r
+  - B-do
+  - B-f
+  - B-mo
+  - I-do
+  - I-m
+  - B-m
+  - I-f
+  - I-r
+  - I-du
+  - X
+  - CLS
+  - SEP
+  metric_meta:
+  - SeqEval
+  n_class: 16
+  loss: SeqCeCriterion
+  split_names:
+  - train
+  - dev
+  - test
+  task_type: SeqenceLabeling
+ade:
+  data_format: PremiseOnly
+  encoder_type: PUBMEDBERT
+  dropout_p: 0.1
+  enable_san: false 
+  labels:
+  - P
+  - N
+  metric_meta:
+  - ACC
+  - MCC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  adv_loss: SymKlCriterion
+  n_class: 8
+  split_names:
+  - train
+  - test
+  task_type: Classification
+bc2gm:
+  data_format: Seqence
+  encoder_type: PUBMEDBERT
+  dropout_p: 0.3
+  enable_san: False
+  labels:
+  - O
+  - S-GENE
+  - B-GENE
+  - E-GENE
+  - I-GENE
+  - X
+  - CLS
+  - SEP
+  metric_meta:
+  - SeqEval
+  n_class: 8
+  loss: SeqCeCriterion
+  split_names:
+  - train
+  - dev
+  - test
+  task_type: SeqenceLabeling
+bc4chemd:
+  data_format: Seqence
+  encoder_type: PUBMEDBERT
+  dropout_p: 0.3
+  enable_san: False
+  labels:
+  - O
+  - B-Chemical
+  - E-Chemical
+  - S-Chemical
+  - I-Chemical
+  - X
+  - CLS
+  - SEP
+  metric_meta:
+  - SeqEval
+  n_class: 8
+  loss: SeqCeCriterion
+  split_names:
+  - train
+  - dev
+  - test
+  task_type: SeqenceLabeling
+bc5cdr:
+  data_format: Seqence
+  encoder_type: PUBMEDBERT
+  dropout_p: 0.3
+  enable_san: False
+  labels:
+  - O
+  - B-Chemical
+  - E-Chemical
+  - I-Disease
+  - E-Disease
+  - B-Disease
+  - S-Chemical
+  - I-Chemical
+  - S-Disease
+  - X
+  - CLS
+  - SEP
+  metric_meta:
+  - SeqEval
+  n_class: 12
+  loss: SeqCeCriterion
+  split_names:
+  - train
+  - dev
+  - test
+  task_type: SeqenceLabeling
+ncbi:
+  data_format: Seqence
+  encoder_type: PUBMEDBERT
+  dropout_p: 0.3
+  enable_san: False
+  labels:
+  - O
+  - I-Disease
+  - E-Disease
+  - B-Disease
+  - S-Disease
+  - X
+  - CLS
+  - SEP
+  metric_meta:
+  - SeqEval
+  n_class: 8
+  loss: SeqCeCriterion
+  split_names:
+  - train
+  - dev
+  - test
+  task_type: SeqenceLabeling
+jnlpba:
+  data_format: Seqence
+  encoder_type: PUBMEDBERT
+  dropout_p: 0.3
+  enable_san: False
+  labels:
+  - O
+  - E-protein
+  - E-cell_type
+  - I-RNA
+  - I-cell_type
+  - E-DNA
+  - B-cell_type
+  - E-cell_line
+  - S-RNA
+  - S-cell_type
+  - B-cell_line
+  - S-cell_line
+  - B-protein
+  - E-RNA
+  - I-DNA
+  - I-cell_line
+  - I-protein
+  - B-DNA
+  - S-protein
+  - B-RNA
+  - S-DNA
+  - X
+  - CLS
+  - SEP
+  metric_meta:
+  - SeqEval
+  n_class: 24
+  loss: SeqCeCriterion
+  split_names:
+  - train
+  - dev
+  - test
+  task_type: SeqenceLabeling
