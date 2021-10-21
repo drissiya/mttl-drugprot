@@ -1,5 +1,5 @@
 # BioCreative VII DrugProt Track
-This repository contains all material needed for our participation in the BioCreative VII Track 1: Text mining drug and chemical-protein interactions (DrugProt). We explore a Multi-Task Transfer Learning-based method (MTTL) for extracting the chemical-protein relations. We use MTTL by training several clinical and biomedical natural language processing tasks together based on pre-trained language models. The datasets include: DrugProt, ChemProt, TAC 2017, n2c2 2018, bc2gm, bc5cdr, ncbi, i2b2 2010 and ADE dataset. More details are provided [here](https://bionlp.nlm.nih.gov/tac2017adversereactions/).
+This repository contains all material needed for our participation in the BioCreative VII Track 1: Text mining drug and chemical-protein interactions (DrugProt). We explore a Multi-Task Transfer Learning-based method (MTTL) for extracting the chemical-protein relations. We use MTTL by training several clinical and biomedical natural language processing tasks together based on pre-trained language models. The datasets include: DrugProt, ChemProt, TAC 2017, n2c2 2018, bc2gm, bc5cdr, ncbi, i2b2 2010 and ADE dataset. More details are provided [here](https://github.com/drissiya/mttl-drugprot/tree/main/data).
 
 
 
